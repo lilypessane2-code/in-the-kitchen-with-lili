@@ -597,8 +597,17 @@ table.med td{padding:8px;border-bottom:1px solid var(--frame2)}
 /* v10.4.22 COVER MATCH (EN ONLY — Lili's supplied cover picture, 2026-11-21:
    beige frame + white inner border, reference collage proportions, compact
    centred label, white band and slim NEXT PAGE strip; all sizes in cqw of
-   the frame so the cover scales as one picture) */
-#capa .in{justify-content:center}
+   the frame so the cover scales as one picture)
+   v10.4.23 BIGGER COVER (EN ONLY, 2026-11-21 — Lili: "Make the pictures
+   bigger on the cover"): the cover sheet now hugs the frame — full-height
+   min-height removed, small even padding (overrides the template's inline
+   12px), narrower sheet side margins on phones — so the frame takes the
+   sheet's full inner width and every photo scales up with it. Internal
+   proportions unchanged; all cover sizes still in cqw of the frame. */
+#capa .in{justify-content:center;min-height:0;padding:16px 6px !important}
+@media(max-width:560px){
+ #capa .in{margin:10px 2px}
+}
 #capa .covera-in{flex:none;width:min(100%,calc((100dvh - 175px)*0.7146));margin:0 auto;aspect-ratio:1194/1671;height:auto;max-height:none;background:#EAE2D0;border-radius:18px;box-shadow:0 12px 34px rgba(60,50,30,.20);container-type:inline-size}
 #capa .cova-white{position:absolute;inset:1.5% 2.1% 2.9%;background:#FEFDF8;border-radius:2.2cqw;z-index:0}
 #capa .cova-grid{inset:2.81% 4.7% 17.1% 3.3%;gap:0.55cqw;z-index:1}
